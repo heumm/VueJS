@@ -8,7 +8,7 @@
     <div id="app">
       {{message}}
     </div>
-helllo
+
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js" charset="utf-8"></script>
     <script>
@@ -16,6 +16,22 @@ helllo
         el: "#app",
         data: {
           message: 'Hello Vue.js!'
+        },
+        beforeCreate: function() {
+          console.log("beforeCreate");
+        },
+        created: function() {
+          console.log("created");
+        },
+        mounted: function() {
+          console.log("mounted");
+          this.message = 'Hello Vue!';  //beforeupdate, updated 단계에서 메소드를 호출하기위한 data수정
+        },
+        beforeUpdate: function() {
+          console.log("beforeUpdate");
+        },
+        updated: function() {
+          console.log("updated");
         }
       });
     </script>

@@ -5,20 +5,15 @@
     <!-- key는 반복문 돌린 요소를 컴퓨터가 구분하기 위해 쓴다. -->
   </div>
 
-
   <div v-for="product in products" :key="product">
     <h4>{{product}}</h4>
     <p>50 만원</p>
+    <button v-on:click="accusecount++">허위매물신고</button> <span>신고수 : {{ accusecount }}</span>
+    <!-- v-on:click 또는 @click으로도 가능 -->
   </div>
-  <!-- <div>
-    <h4>{{products[1]}}</h4>
-    <p>60 만원</p>
-  </div>
-  <div>
-    <h4>{{products[2]}}</h4>
-    <p>45 만원</p>
-  </div> -->
 </template>
+
+
 
 <script>
 
@@ -26,6 +21,7 @@ export default {
   name: 'App',
   data(){
     return{
+      accusecount : 0,
       menu : ['Home', 'Shop', 'About'],
       products : ['역삼동원룸', '천호동원룸', '마포구원룸']
     }

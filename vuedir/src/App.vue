@@ -9,7 +9,7 @@
     <h4>{{product}}</h4>
     <p>50 만원</p>
     <button v-on:click="accusecount++">허위매물신고</button> <span>신고수 : {{ accusecount }}</span>
-    <!-- v-on:click 또는 @click으로도 가능 -->
+    <!-- v-on:click 또는 @click으로도 가능 --> 
   </div>
 </template>
 

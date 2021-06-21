@@ -15,7 +15,7 @@
     <img :src="rooms[i].image" @click="modalIsOpen = true" class="room-img">
     <h4>{{rooms[i].title}}</h4>
     <p>{{rooms[i].price}} 원</p>
-    <button v-on:click="increase(i)">허위매물신고</button> <span>신고수 : {{ accuseCount[i] }}</span>
+    <!-- <button v-on:click="increase(i)">허위매물신고</button> <span>신고수 : {{ accuseCount[i] }}</span> -->
     <!-- v-on:click 또는 @click으로도 가능 --> 
   </div>
 </template>
@@ -33,8 +33,9 @@ export default {
       //react에서는 state라고도 부른다.
       rooms : roomData,
       modalIsOpen : false,
-      accuseCount : [0, 0, 0],
+      // accuseCount : [0, 0, 0],
       menu : ['Home', 'Shop', 'About'],
+      /*
       products : [
           {
             roomName : '역삼동원룸',
@@ -48,15 +49,17 @@ export default {
             roomName : '마포구원룸',
             image : require('./assets/room2.jpg')
           },
-        ], 
-      
+        ] 
+      */
     }
   },
+  /*
   methods: {
     increase(i){
       this.accuseCount[i]++;
     }
   },
+  */
   components: {
   }
 }
